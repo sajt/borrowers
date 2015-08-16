@@ -9,7 +9,7 @@ export default Ember.Route.extend({
       refreshModel: true
     }
   },
-  model(params) {
-    return this.store.findAll('friend', params);
+  model: function(params) {
+    return this.store.query('friend', params);
   },
 });
