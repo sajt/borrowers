@@ -24,3 +24,7 @@ table {
 .friends-table thead tr {
   cursor: pointer;
 }
+
+.burger {
+  display: none;
+}
