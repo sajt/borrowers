@@ -4,12 +4,6 @@ export default Ember.Route.extend({
   model() {
     return this.store.createRecord('friend');
   },
-  activate() {
-    console.log('----- activate hook called -----');
-  },
-  deactivate() {
-    console.log('----- deactivate hook called -----');
-  },
   resetController: function (controller, isExiting) {
     if (isExiting) {
       // We grab the model from the controller //
