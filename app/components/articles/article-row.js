@@ -7,11 +7,6 @@ export default Ember.Component.extend({
   setObserver: function() {
     this.addObserver('article.state', this, this.stateChanged);
   }.on('init'),
-  stateChanged() {
-    var article = this.get('article');
-    console.log(article);
-    console.log('OMG Expensive operation because article state changed');
-  },
   actions: {
     saveArticle() {
       let article = this.get('article');
