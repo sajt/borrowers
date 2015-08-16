@@ -1,6 +1,7 @@
 <table class="primary friends-table">
   <thead>
   <tr>
+    <th>Icon</th>
     <th {{action "setSortBy" "firstName"}}>Name</th>
     <th {{action "setSortBy" "totalArticles"}}>Articles</th>
     <th></th>
@@ -9,6 +10,7 @@
   <tbody>
     {{#each model as |friend|}}
       <tr>
+        <td>{{gravatar-image email=friend.email defaultImage='identicon' size=50}}</td>
         <td>{{link-to friend.fullName "articles" friend}}</td>
         <td>{{friend.totalArticles}}</td>
         <td><a href="#" {{action "delete" friend}}>delete</a></td>

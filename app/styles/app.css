@@ -28,3 +28,6 @@ table {
 .burger {
   display: none;
 }
+.gravatar-image {
+  border: 1px solid gray;
+}
